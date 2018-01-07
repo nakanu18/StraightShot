@@ -4,19 +4,29 @@ import ResultsCell from './ResultsCell';
 
 class ResultsListView extends Component {
 
+    // Properties
+
+    state = { results: [] };
+
+    // Life cycle methods
+
     componentWillMount() {
+        // ALEX_TODO: build fake data
+        this.setState({ results: [
+            { roundName: 'VEGAS 300', date: 'April 20', score: '258/300' },
+            { roundName: 'VEGAS 300', date: 'April 19', score: '272/300' },
+            { roundName: 'NFAA 300', date: 'April 1', score: '271/300' },
+        ] });
+    }
+
+    renderResults() {
+        return this.state.results.map(result => <ResultsCell {...result} />);
     }
 
     render() {
-        const score0 = { roundName: 'VEGAS 300', date: 'April 20', score: '258/300' };
-        const score1 = { roundName: 'VEGAS 300', date: 'April 19', score: '272/300' };
-        const score2 = { roundName: 'NFAA 300', date: 'April 1', score: '271/300' };
-
         return (
             <View>
-                <ResultsCell {...score0} />
-                <ResultsCell {...score1} />
-                <ResultsCell {...score2} />
+                {this.renderResults()}
             </View>
         );
     }
