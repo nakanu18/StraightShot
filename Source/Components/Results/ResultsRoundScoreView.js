@@ -16,7 +16,6 @@ const styles = {
     roundScoreViewStyle: {
         justifyContent: 'center',
         alignItems: 'flex-start',
-        backgroundColor: '#FF0000',
     },
     roundScoreFullScoreStyle: {
         fontSize: 16,
