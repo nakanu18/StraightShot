@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { ScrollView } from 'react-native';
 import ResultsCell from './ResultsCell';
 
 class ResultsListView extends Component {
@@ -29,9 +29,9 @@ class ResultsListView extends Component {
 
     render() {
         return (
-            <View>
+            <ScrollView>
                 {this.renderResults()}
-            </View>
+            </ScrollView>
         );
     }
 

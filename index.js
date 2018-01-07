@@ -6,7 +6,7 @@ import ResultsListView from './Source/Components/Results/ResultsListView';
 
 // Create a component
 const App = () => (
-    <View>
+    <View style={{ flex: 1 }}>
         <CommonHeaderView headerText='Results' />
         <ResultsListView />
     </View>
