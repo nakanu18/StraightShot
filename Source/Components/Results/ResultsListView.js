@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView } from 'react-native';
+import { FlatList } from 'react-native';
 import ResultsCell from './ResultsCell';
 
 class ResultsListView extends Component {
@@ -12,11 +12,13 @@ class ResultsListView extends Component {
 
     componentWillMount() {
         // ALEX_TODO: build fake data
-        this.setState({ results: [
-            { roundId: 0, roundName: 'VEGAS 300', date: 'April 20', score: '258/300' },
-            { roundId: 1, roundName: 'VEGAS 300', date: 'April 19', score: '272/300' },
-            { roundId: 2, roundName: 'NFAA 300', date: 'April 1', score: '271/300' },
-        ] });
+        this.setState({
+            results: [
+                { roundId: 0, roundName: 'VEGAS 300', date: 'April 20', score: '258/300' },
+                { roundId: 1, roundName: 'VEGAS 300', date: 'April 19', score: '272/300' },
+                { roundId: 2, roundName: 'NFAA 300', date: 'April 1', score: '271/300' },
+            ]
+        });
     }
 
     // Render methods
@@ -29,9 +31,15 @@ class ResultsListView extends Component {
 
     render() {
         return (
-            <ScrollView>
-                {this.renderResults()}
-            </ScrollView>
+            <FlatList
+                data={this.state.results}
+                keyExtractor={
+                    (item) => item.roundId
+                }
+                renderItem={
+                    ({ item }) => <ResultsCell {...item} />
+                }
+            />
         );
     }
 

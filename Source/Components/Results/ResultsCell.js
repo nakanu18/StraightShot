@@ -13,7 +13,6 @@ const ResultsCell = (props) => (
 const styles = {
     cellStyle: {
         flexDirection: 'row',
-        backgroundColor: '#F8F8F8',
         paddingTop: 15,
         paddingBottom: 15,
         paddingLeft: 15,
