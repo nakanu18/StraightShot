@@ -6,7 +6,10 @@ class ResultsListView extends React.Component {
 
     // Properties
 
-    state = { results: [] };
+    state = {
+        selectedRoundId: null,
+        results: [],
+    };
 
     // Life cycle methods
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
 import ResultsRoundScoreView from './ResultsRoundScoreView';
 
@@ -17,11 +17,12 @@ class ResultsCell extends React.Component {
 
     render() {
         return (
-            <TouchableOpacity onPress={this.didTapItem}>
-                <View style={styles.cellStyle}>
-                    <ResultsRoundDetailsView {...this.props} />
-                    <ResultsRoundScoreView {...this.props} />
-                </View>
+            <TouchableOpacity
+                style={styles.cellStyle}
+                onPress={this.didTapItem}
+            >
+                <ResultsRoundDetailsView {...this.props} />
+                <ResultsRoundScoreView {...this.props} />
             </TouchableOpacity>
         );
     }
