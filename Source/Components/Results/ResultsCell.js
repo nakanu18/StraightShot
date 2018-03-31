@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, View, Text } from 'react-native';
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
 import ResultsRoundScoreView from './ResultsRoundScoreView';
 
@@ -15,14 +15,23 @@ class ResultsCell extends React.Component {
 
     // Rendering
 
+    renderExpandedDetails() {
+        if (this.props.isSelected) {
+            return <Text>This is the expanded details section\nIt has alot of stuff</Text>;
+        }
+    }
+
     render() {
         return (
             <TouchableOpacity
                 style={styles.cellStyle}
                 onPress={this.didTapItem}
             >
-                <ResultsRoundDetailsView {...this.props} />
-                <ResultsRoundScoreView {...this.props} />
+                <View style={{ flexDirection: 'row' }}>
+                    <ResultsRoundDetailsView {...this.props} />
+                    <ResultsRoundScoreView {...this.props} />
+                </View>
+                {this.renderExpandedDetails()}
             </TouchableOpacity>
         );
     }
@@ -31,7 +40,7 @@ class ResultsCell extends React.Component {
 
 const styles = {
     cellStyle: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         paddingTop: 15,
         paddingBottom: 15,
         paddingLeft: 15,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FlatList, Text, View } from 'react-native';
+import { FlatList } from 'react-native';
 import ResultsCell from './ResultsCell';
 
 class ResultsListView extends React.Component {
@@ -25,7 +25,7 @@ class ResultsListView extends React.Component {
         });
     }
 
-    //  Interaction
+    // Interaction
 
     didSelectRowCallback = (roundId) => {
         this.setState({ selectedRoundId: roundId });
@@ -35,21 +35,21 @@ class ResultsListView extends React.Component {
 
     keyItemExtractor = (item) => item.roundId
     renderItem = ({ item }) => (
-        <ResultsCell didSelectRowCallback={this.didSelectRowCallback} {...item} />
+        <ResultsCell
+            didSelectRowCallback={this.didSelectRowCallback}
+            isSelected={this.state.selectedRoundId === item.roundId}
+            {...item}
+        />
     )
 
     render() {
         return (
-            <View>
-                <FlatList
-                    data={this.state.results}
-                    keyExtractor={this.keyItemExtractor}
-                    renderItem={this.renderItem}
-                />
-                <Text>
-                    selectedRoundId: ({this.state.selectedRoundId})
-                </Text>
-            </View>
+            <FlatList
+                data={this.state.results}
+                extraData={this.state}
+                keyExtractor={this.keyItemExtractor}
+                renderItem={this.renderItem}
+            />
         );
     }
 
