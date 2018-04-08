@@ -2,13 +2,13 @@
 import React from 'react';
 import { AppRegistry, View } from 'react-native';
 import CommonHeaderView from './Source/Components/Common/CommonHeaderView';
-import ResultsListView from './Source/Components/Results/ResultsListView';
+import ResultsScreen from './Source/Components/Results/ResultsScreen';
 
 // Create a component
 const App = () => (
     <View style={{ flex: 1 }}>
         <CommonHeaderView headerText='Results' />
-        <ResultsListView />
+        <ResultsScreen />
     </View>
 );
 

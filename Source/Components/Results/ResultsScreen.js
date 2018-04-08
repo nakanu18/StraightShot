@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import ResultsCell from './ResultsCell';
 
-class ResultsListView extends React.Component {
+class ResultsScreen extends React.Component {
 
     // Properties
 
@@ -55,4 +55,4 @@ class ResultsListView extends React.Component {
 
 }
 
-export default ResultsListView;
+export default ResultsScreen;

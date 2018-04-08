@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const RoundDetailsView = (props) => (
+const ResultsRoundDetailsView = (props) => (
     <View style={styles.roundDetailsViewStyle}>
         <Text style={styles.roundDetailsNameStyle}>
             {props.roundName}
@@ -27,4 +27,4 @@ const styles = {
     },
 };
 
-export default RoundDetailsView;
+export default ResultsRoundDetailsView;
