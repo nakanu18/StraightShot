@@ -3,7 +3,7 @@ import { TouchableOpacity, View, Text } from 'react-native';
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
 import ResultsRoundScoreView from './ResultsRoundScoreView';
 
-class ResultsCell extends React.Component {
+class ResultsRoundCell extends React.Component {
 
     // Properties
 
@@ -51,4 +51,4 @@ const styles = {
     },
 };
 
-export default ResultsCell;
+export default ResultsRoundCell;

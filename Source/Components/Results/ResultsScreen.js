@@ -1,6 +1,8 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-import ResultsCell from './ResultsCell';
+
+import ResultsRoundCell from './ResultsRoundCell';
+import RoundEditorScreen from '../RoundEditor/RoundEditorScreen';
 
 class ResultsScreen extends React.Component {
 
@@ -29,13 +31,18 @@ class ResultsScreen extends React.Component {
 
     didSelectRowCallback = (roundId) => {
         this.setState({ selectedRoundId: roundId });
+        
+        this.props.navigator.push({
+            screen: 'RoundEditorScreen',
+            title: 'Round Editor'
+        });
     }
 
     // Rendering
 
     keyItemExtractor = (item) => item.roundId
     renderItem = ({ item }) => (
-        <ResultsCell
+        <ResultsRoundCell
             didSelectRowCallback={this.didSelectRowCallback}
             isSelected={this.state.selectedRoundId === item.roundId}
             {...item}
