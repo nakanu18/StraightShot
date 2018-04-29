@@ -1,7 +1,10 @@
+// @flow
+
 import React from 'react';
 import { View, Text } from 'react-native';
+import type { RoundInfo } from '../../types';
 
-const RoundScoreView = (props) => (
+const RoundScoreView = (props: RoundInfo) => (
     <View style={styles.roundScoreViewStyle}>
         <Text style={styles.roundScoreFullScoreStyle}>
             {props.score}

@@ -1,7 +1,14 @@
+// @flow
+
 import React from 'react';
 import { Text, View } from 'react-native';
 
-const ResultsRoundDetailsView = (props) => (
+type Props = {
+    roundName: string,
+    date: string,
+}
+
+const ResultsRoundDetailsView = (props: Props) => (
     <View style={styles.roundDetailsViewStyle}>
         <Text style={styles.roundDetailsNameStyle}>
             {props.roundName}

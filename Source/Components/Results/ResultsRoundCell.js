@@ -1,13 +1,15 @@
 // @flow
 
 import React from 'react';
+// import { TouchableOpacity, View, Text } from 'react-native';
 import { TouchableOpacity, View, Text } from 'react-native';
+
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
 import ResultsRoundScoreView from './ResultsRoundScoreView';
+import type { RoundInfo } from '../../types';
 
-type Props = {
-    roundId: number,
-    didSelectRowCallback: function,
+type Props = RoundInfo & {
+    didSelectRowCallback: Function,
     isSelected: boolean,
 }
 
