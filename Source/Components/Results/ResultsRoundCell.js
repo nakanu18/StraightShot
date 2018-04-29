@@ -6,9 +6,9 @@ import { TouchableOpacity, View, Text } from 'react-native';
 
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
 import ResultsRoundScoreView from './ResultsRoundScoreView';
-import type { RoundInfo } from '../../types';
+import * as Types from '../../types';
 
-type Props = RoundInfo & {
+type Props = Types.RoundInfo & {
     didSelectRowCallback: Function,
     isSelected: boolean,
 }

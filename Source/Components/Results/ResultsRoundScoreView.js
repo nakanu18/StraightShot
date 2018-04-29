@@ -3,9 +3,9 @@
 import React from 'react';
 // $FlowFixMe
 import { View, Text } from 'react-native';
-import type { RoundInfo } from '../../types';
+import * as Types from '../../types';
 
-const RoundScoreView = (props: RoundInfo) => (
+const RoundScoreView = (props: Types.RoundInfo) => (
     <View style={styles.roundScoreViewStyle}>
         <Text style={styles.roundScoreFullScoreStyle}>
             {props.score}

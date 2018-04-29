@@ -7,7 +7,7 @@ import { NavigationScreenProp, NavigationStateRoute } from 'react-native-navigat
 
 import ResultsRoundCell from '../Results/ResultsRoundCell';
 // import RoundEditorScreen from '../RoundEditor/RoundEditorScreen';
-import type { RoundInfo } from '../../types';
+import * as Types from '../../types';
 
 type Props = {
     navigator: NavigationScreenProp<NavigationStateRoute>
@@ -15,11 +15,11 @@ type Props = {
 
 type State = {
     selectedRoundId: ?number,
-    results: Array<RoundInfo>
+    results: Array<Types.RoundInfo>
 }
 
 type RenderItem = {
-    item: RoundInfo,
+    item: Types.RoundInfo,
 }
 
 class ResultsScreen extends React.Component<Props, State> {
@@ -52,7 +52,7 @@ class ResultsScreen extends React.Component<Props, State> {
 
     // Rendering
 
-    keyItemExtractor = (item: RoundInfo) => item.roundId
+    keyItemExtractor = (item: Types.RoundInfo) => item.roundId
     renderItem = ({ item }: RenderItem) => (
         <ResultsRoundCell
             didSelectRowCallback={this.didSelectRowCallback}
