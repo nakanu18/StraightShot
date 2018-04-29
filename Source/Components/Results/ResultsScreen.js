@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+// $FlowFixMe
 import { FlatList } from 'react-native';
 import { NavigationScreenProp, NavigationStateRoute } from 'react-native-navigation';
 
@@ -22,8 +23,6 @@ type RenderItem = {
 }
 
 class ResultsScreen extends React.Component<Props, State> {
-
-    // Properties
 
     // Life cycle methods
 

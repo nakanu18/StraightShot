@@ -1,16 +1,25 @@
+// @flow
+
 import React from 'react';
+// $FlowFixMe
 import { View } from 'react-native';
 
-class RoundEditorScreen extends React.Component {
+type Props = {
+}
 
-    // Properties
+type State = {
+}
 
-    state = {
-        selectedRoundId: null,
-        results: [],
-    };
+class RoundEditorScreen extends React.Component<Props, State> {
 
     // Life cycle methods
+
+    constructor(props: Props) {
+        super(props);
+
+        this.state = {
+        };
+    }
 
     componentWillMount() {
     }

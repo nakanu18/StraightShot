@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-// import { TouchableOpacity, View, Text } from 'react-native';
+// $FlowFixMe
 import { TouchableOpacity, View, Text } from 'react-native';
 
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
@@ -14,8 +14,6 @@ type Props = RoundInfo & {
 }
 
 class ResultsRoundCell extends React.Component<Props> {
-
-    // Properties
 
     // Interaction
 

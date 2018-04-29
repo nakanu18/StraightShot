@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+// $FlowFixMe
 import { View, Text } from 'react-native';
 import type { RoundInfo } from '../../types';
 
