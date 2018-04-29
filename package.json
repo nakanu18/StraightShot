@@ -1,12 +1,16 @@
 {
   "name": "StraightShot",
+  "main": "lib/index.js",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "build": "babel Source/ -d lib/",
+    "prepublish": "yarn run build",
     "test": "jest"
   },
   "dependencies": {
+    "flow-typed": "^2.4.0",
     "react": "16.0.0",
     "react-native": "0.51.0",
     "react-native-navigation": "^1.1.434",
@@ -15,9 +19,12 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "22.0.4",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react-native": "4.0.0",
     "eslint-config-rallycoding": "^3.2.0",
+    "flow-bin": "^0.71.0",
     "jest": "22.0.4",
     "react-test-renderer": "16.0.0"
   },

@@ -1,9 +1,17 @@
+// @flow
+
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import ResultsRoundDetailsView from './ResultsRoundDetailsView';
 import ResultsRoundScoreView from './ResultsRoundScoreView';
 
-class ResultsRoundCell extends React.Component {
+type Props = {
+    roundId: number,
+    didSelectRowCallback: function,
+    isSelected: boolean,
+}
+
+class ResultsRoundCell extends React.Component<Props> {
 
     // Properties
 
